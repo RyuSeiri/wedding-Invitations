@@ -12,7 +12,7 @@
         loop: true,
         drag: false,
         dir: 'v',
-        der: 0.5,
+        der: 0.2,
         change: function(data) {},
         beforeChange: function(data) {},
         afterChange: function(data) {},
