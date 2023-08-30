@@ -8,11 +8,11 @@
     var d = {
         page: '.page',
         start: 0,
-        duration: 500,
+        duration: 1000,
         loop: true,
         drag: false,
         dir: 'v',
-        der: 0.2,
+        der: 0.1,
         change: function(data) {},
         beforeChange: function(data) {},
         afterChange: function(data) {},

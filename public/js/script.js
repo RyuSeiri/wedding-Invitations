@@ -24,18 +24,7 @@ function loadDone() {
  * 判断设备类型
  */
 function pcTip() {
-  if (
-    navigator.userAgent.match(
-      /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-    )
-  ) {
-    isMobile = true;
-  } else {
-    loadSum = loadSum - 10;
-    isMobile = false;
-    document.getElementById("loading-txt").innerHTML =
-      "请使用手机或其它移动设备打开!";
-  }
+  isMobile = true;
 }
 
 /**

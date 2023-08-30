@@ -33,8 +33,9 @@ body {
 }
 
 .page {
-  background-color: #fff;
+  background-color: #e2ecf5;
 }
+
 /* 箭头 */
 @-webkit-keyframes start {
   0%,
@@ -71,9 +72,9 @@ body {
 .start {
   position: fixed;
   left: 50%;
-  margin-left: 0;
-  top: 90%;
-  margin-top: 0;
+  margin-left: -17px;
+  top: 95%;
+  margin-top: -34px;
   width: 34px;
   height: 34px;
 }
@@ -207,9 +208,9 @@ body {
 #play-btn {
   position: absolute;
   background-color: #ddd6d66b;
-  top: 18px;
-  right: 20px;
-  z-index: 30;
+  top: 20px;
+  right: 15px;
+  z-index: 3000;
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -242,22 +243,12 @@ body {
 .hide {
   display: none;
 }
-#map-msg {
-  height: 188px;
-  padding: 5px;
-  text-align: left;
-  line-height: 22px;
-  font-size: 14px;
-  padding-left: 3%;
-  background-color: #f6f6f6;
-}
+
 #map {
   width: 100%;
   height: calc(100% - 188px);
 }
-#map-msg p {
-  margin: 8px 0;
-}
+
 .red-icon {
   color: #e60000;
   margin-right: 5px;
@@ -448,4 +439,61 @@ body {
 
 .load-img {
   visibility: hidden;
+}
+
+.radius {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.p-text {
+  color: #333;
+  font-size: 15px;
+}
+
+.p-button {
+  background-color: rgb(164, 34, 34);
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.white-icon {
+  color: #ffffff;
+}
+
+.tel-me {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-column-gap: 30px;
+}
+
+.tel-me img {
+  object-fit: contain;
+  width: 144px;
+  margin: 0 auto;
+}
+
+.tel-me a,
+.tel-me .photo-box {
+  text-align: center;
+}
+
+.map-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.dh-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
 }

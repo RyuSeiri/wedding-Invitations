@@ -11,11 +11,6 @@
     <link rel="stylesheet" href="./public/css/zepto.fullpage.css" />
     <link rel="stylesheet" href="./public/css/animate.css" />
     <link rel="stylesheet" href="./public/css/index.css" />
-    <!-- <script
-      type="text/javascript"
-      src="https://api.map.baidu.com/api?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l&s=1"
-      crossorigin="anonymous"
-    ></script> -->
     <script type="text/javascript" src="./public/js/js.fullpage.js"></script>
     <script type="text/javascript" src="./public/js/script.js"></script>
   </head>
@@ -1082,7 +1077,7 @@
               class="photo-box js-animate animated animation-2000"
               data-animate="fadeIn"
               data-sectime="1000"
-              data-time="33000"
+              data-time="31000"
               style="
                 position: absolute;
                 width: 100%;
@@ -1096,7 +1091,7 @@
             <h4
               class="js-animate animated animation-2000"
               data-animate="myzoomIn"
-              data-time="36000"
+              data-time="34000"
               style="
                 position: absolute;
                 width: 100%;
@@ -1160,48 +1155,57 @@
           </div>
         </div>
         <div class="page page7">
-          <div class="money-page">
+          <div class="photo-wrap">
             <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownLeft"
-              data-sectime="1000"
-              data-time="500"
+              class="full-bg js-animate animated animation-4000"
               style="
-                position: absolute;
+                background-image: url(./public/photo/p1-1.jpg);
                 width: 100%;
-                height: 50%;
+                height: 100%;
+                position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 1;
-                background-image: url(./public/photo/p5-1-1.jpg);
               "
+              data-sec="fadeIn"
+              data-time="0"
             ></div>
           </div>
-          <div id="last-msg">
-            <p
-              class="js-animate animated"
-              data-animate="bounceInDown"
-              data-time="0"
+          <div class="ele-wrap">
+            <div
+              style="
+                position: relative;
+                top: 10%;
+                text-align: center;
+                margin: auto;
+                width: 80%;
+                justify-content: center;
+                align-items: center;
+              "
             >
-              <i class="iconfont red-icon">&#xe63e;</i>礼金
-            </p>
-            <p
-              class="js-animate animated"
-              data-animate="bounceInUp"
-              data-time="1000"
+              <p class="p-text p-button">🧧 结 ❤ 婚 ❤ 红 ❤ 包 🧧</p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: 18%;
+                text-align: center;
+                width: 100%;
+              "
             >
-              <i class="iconfont red-icon">&#xe636;</i>二维码
-            </p>
+              <div class="tel-me">
+                <img class="photo-box" src="./public/photo/p7-1-1.jpg" />
+                <img class="photo-box" src="./public/photo/p7-1-2.jpg" />
+                <p class="p-text p-button">新郎</p>
+                <p class="p-text p-button">新娘</p>
+              </div>
+            </div>
           </div>
-          <div class="ele-wrap"></div>
         </div>
-        <span class="start">
-          <i class="iconfont" style="color: #fff; font-size: 30px">
-            &#xe606;
-          </i>
-        </span>
         <audio id="mp3" src="./public/music/music.mp3" loop></audio>
       </div>
+      <span class="start">
+        <i class="iconfont" style="color: #fff; font-size: 30px"> &#xe606; </i>
+      </span>
     </div>
   </body>
 </html>
