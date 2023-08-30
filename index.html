@@ -16,7 +16,7 @@
       src="https://api.map.baidu.com/api?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l&s=1"
       crossorigin="anonymous"
     ></script> -->
-    <script src="./public/js/js.fullpage.js"></script>
+    <script type="text/javascript" src="./public/js/js.fullpage.js"></script>
     <script type="text/javascript" src="./public/js/script.js"></script>
   </head>
 
@@ -30,7 +30,11 @@
     <div id="play-btn">
       <i class="iconfont" style="font-size: 20px">&#xe617;</i>
     </div>
-    <img class="load-img" onload="loadDone();pcTip();" src="./public/photo/p1-1.jpg" />
+    <img
+      class="load-img"
+      onload="loadDone();pcTip();"
+      src="./public/photo/p1-1.jpg"
+    />
     <img class="load-img" onload="loadDone();" src="./public/photo/p1-2.jpg" />
     <img class="load-img" onload="loadDone();" src="./public/photo/p2-1.jpg" />
     <img class="load-img" onload="loadDone();" src="./public/photo/p3-1.jpg" />
@@ -518,7 +522,7 @@
               data-time="13000"
               style="
                 position: absolute;
-                top: 18%;
+                top: 15%;
                 width: 100%;
                 text-align: center;
                 font-size: 35px;
@@ -527,7 +531,7 @@
                 color: #2e2e2e;
               "
             >
-              我 们 结 婚 啦 !
+              我们结婚啦 !
             </h2>
           </div>
         </div>
@@ -1103,6 +1107,7 @@
                 line-height: 50px;
                 font-weight: 700;
                 font-family: 'KaiTi';
+                font-size: 20px;
                 color: #2e2e2e;
               "
             >
@@ -1130,7 +1135,7 @@
           </div>
           <div class="ele-wrap"></div>
         </div>
-        <div class="page page6" style="position: relative">
+        <div class="page page6">
           <div id="map"></div>
           <div id="location-btn">
             <i class="iconfont" style="font-size: 32px">&#xe616;</i>
@@ -1191,9 +1196,9 @@
           <div class="ele-wrap"></div>
         </div>
         <span class="start">
-          <i class="iconfont" style="color: #efefef; font-size: 30px"
-            >&#xe606;</i
-          >
+          <i class="iconfont" style="color: #fff; font-size: 30px">
+            &#xe606;
+          </i>
         </span>
         <audio id="mp3" src="./public/music/music.mp3" loop></audio>
       </div>

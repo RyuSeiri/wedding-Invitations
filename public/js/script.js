@@ -5,6 +5,14 @@ var loadTimer;
 var domLists = [];
 var mapFlag = false;
 
+(function() {
+  window.HOST_TYPE = "2";
+  window.BMap_loadScriptTime = new Date().getTime();
+  document.write(
+    '<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l&services=&t=20230808153658"></script>'
+  );
+})();
+
 /**
  * 图片加载完成
  */
@@ -29,14 +37,6 @@ function pcTip() {
       "请使用手机或其它移动设备打开!";
   }
 }
-
-(function() {
-  window.HOST_TYPE = "2";
-  window.BMap_loadScriptTime = new Date().getTime();
-  document.write(
-    '<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l&services=&t=20230808153658"></script>'
-  );
-})();
 
 /**
  * 开始函数
@@ -171,11 +171,10 @@ function initMap() {
     var myCompOverlay = new ComplexCustomOverlay(
       new BMap.Point(mapCenter[0], mapCenter[1]),
       "婚礼现场",
-      "N and Y"
+      ""
     );
 
     map.addOverlay(myCompOverlay);
-
     //定义点击事件
     document.querySelector("#location-btn").addEventListener("click", () => {
       map.panTo(new BMap.Point(mapCenter[0], mapCenter[1]));
