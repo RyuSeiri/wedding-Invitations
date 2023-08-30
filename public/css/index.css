@@ -176,7 +176,7 @@ body {
 }
 #play-btn {
   position: absolute;
-  background-color: #969696;
+  background-color: #ddd6d66b;
   top: 18px;
   right: 20px;
   z-index: 30;
@@ -184,13 +184,13 @@ body {
   height: 34px;
   border-radius: 50%;
   line-height: 33px;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  border: 3px solid rgb(147 147 147 / 26%);
   text-align: center;
   -webkit-transition-duration: 1s;
   -webkit-animation: rotate 3s linear infinite;
   animation: rotate 3s linear infinite;
   animation-play-state: paused;
-  color: #efefef;
+  color: #f5f5f5;
 }
 .anchorBL {
   display: none !important;
