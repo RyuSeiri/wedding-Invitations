@@ -159,7 +159,7 @@ window.onload = function () {
     function () {
       mp3.play();
       if (!mp3.paused) {
-        this.style.animationPlayState = "running";
+        playBtn.style.animationPlayState = "running";
         mp3.play();
         play = true;
       }
