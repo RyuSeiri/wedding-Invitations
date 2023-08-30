@@ -2,6 +2,8 @@ html,
 body {
   width: 100%;
   overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
 }
 .wp {
   position: absolute;
@@ -82,12 +84,12 @@ body {
 
 @font-face {
   font-family: "iconfont"; /* project id 934283 */
-  src: url("http://at.alicdn.com/t/font_934283_rjwklbuzkg.eot");
-  src: url("http://at.alicdn.com/t/font_934283_rjwklbuzkg.eot?#iefix")
+  src: url("./public/font/font_934283_rjwklbuzkg.eot");
+  src: url("./public/font/font_934283_rjwklbuzkg.eot?#iefix")
       format("embedded-opentype"),
-    url("http://at.alicdn.com/t/font_934283_rjwklbuzkg.woff") format("woff"),
-    url("http://at.alicdn.com/t/font_934283_rjwklbuzkg.ttf") format("truetype"),
-    url("http://at.alicdn.com/t/font_934283_rjwklbuzkg.svg#iconfont")
+    url("./public/font/font_934283_rjwklbuzkg.woff") format("woff"),
+    url("./public/font/font_934283_rjwklbuzkg.ttf") format("truetype"),
+    url("./public/font/font_934283_rjwklbuzkg.svg#iconfont")
       format("svg");
 }
 @-webkit-keyframes rotate {
