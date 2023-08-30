@@ -11,14 +11,13 @@
     <link rel="stylesheet" href="./public/css/zepto.fullpage.css" />
     <link rel="stylesheet" href="./public/css/animate.css" />
     <link rel="stylesheet" href="./public/css/index.css" />
-    <script type="text/javascript">
-      var loadSum = 0;
-      var isMobile = null;
-
-      function loadDone() {
-        loadSum++;
-      }
-    </script>
+    <script
+      type="text/javascript"
+      src="https://api.map.baidu.com/api?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l&s=1"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./public/js/js.fullpage.js"></script>
+    <script type="text/javascript" src="./public/js/script.js"></script>
   </head>
 
   <body>
@@ -31,7 +30,7 @@
     <div id="play-btn">
       <i class="iconfont" style="font-size: 20px">&#xe617;</i>
     </div>
-    <img class="load-img" onload="loadDone();" src="./public/photo/p1-1.jpg" />
+    <img class="load-img" onload="loadDone();pcTip();" src="./public/photo/p1-1.jpg" />
     <img class="load-img" onload="loadDone();" src="./public/photo/p1-2.jpg" />
     <img class="load-img" onload="loadDone();" src="./public/photo/p2-1.jpg" />
     <img class="load-img" onload="loadDone();" src="./public/photo/p3-1.jpg" />
@@ -1197,15 +1196,6 @@
           >
         </span>
         <audio id="mp3" src="./public/music/music.mp3" loop></audio>
-        <script
-          type="text/javascript"
-          src="https://api.map.baidu.com/api?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l&s=1" crossorigin="anonymous"
-        ></script>
-        <script src="./public/js/js.fullpage.js"></script>
-        <!-- <script type="text/javascript"
-      src="http://api.map.baidu.com/api?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./public/js/script.js"></script> -->
-        <script type="text/javascript" src="./public/js/script.js"></script>
       </div>
     </div>
   </body>

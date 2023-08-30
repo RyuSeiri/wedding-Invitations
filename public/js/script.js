@@ -1,21 +1,46 @@
-// 滚屏动画控制
-if (isMobile !== false) {
-  var loadTimer = setInterval(() => {
-    if (loadSum >= 17) {
-      start();
-    }
-  }, 300);
-}
-
+// 图片加载数
+var loadSum = 0;
+var isMobile = null;
+var loadTimer;
 var domLists = [];
 var mapFlag = false;
 
+/**
+ * 图片加载完成
+ */
+function loadDone() {
+  loadSum++;
+}
+
+/**
+ * 判断设备类型
+ */
+function pcTip() {
+  if (
+    navigator.userAgent.match(
+      /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+    )
+  ) {
+    isMobile = true;
+  } else {
+    loadSum = loadSum - 10;
+    isMobile = false;
+    document.getElementById("loading-txt").innerHTML =
+      "请使用手机或其它移动设备打开!";
+  }
+}
+
+/**
+ * 开始函数
+ */
 function start() {
   clearInterval(loadTimer);
   var forEach = [].forEach;
+  // 画面加载完毕之后loading消失
   setTimeout(() => {
     document.getElementById("loading-mask").style.display = "none";
   }, 100);
+
   document.getElementsByClassName("wp-inner")[0].fullpage({
     change: function (e) {
       clearTime();
@@ -78,19 +103,22 @@ function clearTime() {
 function initMap() {
   if (window.BMap) {
     mapFlag = true;
-    //坐标
-    var mapCenter = [123.066801,41.793575];
+    //婚礼地点坐标
+    var mapCenter = [123.066801, 41.793575];
     //百度地图对象声明（大小定义）
     var map = new BMap.Map("map", { minZoom: 20, maxZoom: 50 });
     //设置坐标和大小
     map.centerAndZoom(new BMap.Point(mapCenter[0], mapCenter[1]), 50);
 
+    //定义自定义类
     function ComplexCustomOverlay(point, text, mouseoverText) {
       this._point = point;
       this._text = text;
       this._overText = mouseoverText;
     }
+
     ComplexCustomOverlay.prototype = new BMap.Overlay();
+    //重写初期函数
     ComplexCustomOverlay.prototype.initialize = function (map) {
       this._map = map;
       var div = (this._div = document.createElement("div"));
@@ -110,7 +138,7 @@ function initMap() {
       span.appendChild(document.createTextNode(this._text));
 
       var arrow = (this._arrow = document.createElement("div"));
-    //   arrow.style.background = "url(http://map.baidu.com/fwmap/upload/r/map/fwmap/static/house/images/label.png) no-repeat";
+      //   arrow.style.background = "url(http://map.baidu.com/fwmap/upload/r/map/fwmap/static/house/images/label.png) no-repeat";
       arrow.style.position = "absolute";
       arrow.style.width = "0";
       arrow.style.height = "0";
@@ -120,11 +148,11 @@ function initMap() {
       arrow.style.border = "6px solid transparent";
       arrow.style.borderTop = "6px solid #E60000";
       div.appendChild(arrow);
-
       map.getPanes().labelPane.appendChild(div);
-
       return div;
     };
+
+    //
     ComplexCustomOverlay.prototype.draw = function () {
       var map = this._map;
       var pixel = map.pointToOverlayPixel(this._point);
@@ -140,20 +168,29 @@ function initMap() {
 
     map.addOverlay(myCompOverlay);
 
+    //定义点击事件
     document.querySelector("#location-btn").addEventListener("click", () => {
       map.panTo(new BMap.Point(mapCenter[0], mapCenter[1]));
     });
   }
 }
 
-// 音乐播放控制
+// 画面加载事件
 window.onload = function () {
+  // 滚屏动画控制
+  if (isMobile !== false) {
+    loadTimer = setInterval(() => {
+      if (loadSum >= 17) {
+        start();
+      }
+    }, 300);
+  }
   let mp3 = document.querySelector("#mp3");
   let playBtn = document.querySelector("#play-btn");
   let play;
-
   mp3.load();
 
+  //微信模式下执行此代码
   document.addEventListener(
     "WeixinJSBridgeReady",
     function () {
@@ -187,6 +224,4 @@ window.onload = function () {
       }
     }
   });
-
 };
-  
