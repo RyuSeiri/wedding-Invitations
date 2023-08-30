@@ -84,12 +84,12 @@ body {
 
 @font-face {
   font-family: "iconfont"; /* project id 934283 */
-  src: url("./public/font/font_934283_rjwklbuzkg.eot");
-  src: url("./public/font/font_934283_rjwklbuzkg.eot?#iefix")
+  src: url("../font/font_934283_rjwklbuzkg.eot");
+  src: url("../font/font_934283_rjwklbuzkg.eot?#iefix")
       format("embedded-opentype"),
-    url("./public/font/font_934283_rjwklbuzkg.woff") format("woff"),
-    url("./public/font/font_934283_rjwklbuzkg.ttf") format("truetype"),
-    url("./public/font/font_934283_rjwklbuzkg.svg#iconfont")
+    url("../font/font_934283_rjwklbuzkg.woff") format("woff"),
+    url("../font/font_934283_rjwklbuzkg.ttf") format("truetype"),
+    url("../font/font_934283_rjwklbuzkg.svg#iconfont")
       format("svg");
 }
 @-webkit-keyframes rotate {
