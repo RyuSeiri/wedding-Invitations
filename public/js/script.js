@@ -3,6 +3,13 @@ var loadSum = 0;
 var loadTimer;
 var domLists = [];
 
+/**
+ * 图片加载
+ */
+function loadDone() {
+  loadSum++;
+}
+
 //加载百度地图
 (function () {
   window.HOST_TYPE = "2";
@@ -11,13 +18,6 @@ var domLists = [];
     '<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l&services=&t=20230808153658"></script>'
   );
 })();
-
-/**
- * 图片加载
- */
-function loadDone() {
-  loadSum++;
-}
 
 /**
  * 开始函数
