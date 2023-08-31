@@ -162,6 +162,10 @@ function initMap() {
     );
 
     map.addOverlay(myCompOverlay);
+
+    document.querySelector('#location-btn').addEventListener('click', () => {
+      map.panTo(new BMap.Point(mapCenter[0], mapCenter[1]))
+    })
   }
 }
 
