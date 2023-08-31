@@ -8,6 +8,9 @@ var domLists = [];
  */
 function loadDone() {
   loadSum++;
+  if (loadSum >= 20) {
+    start();
+  }
 }
 
 //加载百度地图
@@ -163,9 +166,9 @@ function initMap() {
 
     map.addOverlay(myCompOverlay);
 
-    document.querySelector('#location-btn').addEventListener('click', () => {
-      map.panTo(new BMap.Point(mapCenter[0], mapCenter[1]))
-    })
+    document.querySelector("#location-btn").addEventListener("click", () => {
+      map.panTo(new BMap.Point(mapCenter[0], mapCenter[1]));
+    });
   }
 }
 
@@ -202,13 +205,6 @@ function showtime() {
 // 画面加载事件
 window.onload = function () {
   // 滚屏动画控制
-  loadTimer = setInterval(() => {
-    //图片全部加载完开始
-    if (loadSum >= 20) {
-      start();
-    }
-  }, 300);
-
   let mp3 = document.querySelector("#mp3");
   let playBtn = document.querySelector("#play-btn");
   let play;
