@@ -2,8 +2,7 @@ html,
 body {
   width: 100%;
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-    "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  font-family: Tahoma, Simsun, sans-serif;
 }
 
 .wp {
@@ -20,6 +19,7 @@ body {
   background-repeat: no-repeat;
   /* background-size: cover; */
   position: relative;
+  background-color: #e2ecf5;
 }
 
 .img-wrap {
@@ -30,10 +30,6 @@ body {
 
 .img-wrap img {
   max-width: 100%;
-}
-
-.page {
-  background-color: #e2ecf5;
 }
 
 /* 箭头 */
@@ -100,6 +96,7 @@ body {
     url("../font/font_934283_rjwklbuzkg.ttf") format("truetype"),
     url("../font/font_934283_rjwklbuzkg.svg#iconfont") format("svg");
 }
+
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
@@ -223,9 +220,11 @@ body {
   animation-play-state: paused;
   color: #f5f5f5;
 }
+
 .anchorBL {
   display: none !important;
 }
+
 .playing {
   -webkit-transition-duration: 1s;
   -webkit-animation: rotate 3s linear infinite;
@@ -238,6 +237,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .hide {
@@ -254,6 +256,7 @@ body {
   margin-right: 5px;
   font-size: 18px;
 }
+
 #location-btn {
   position: absolute;
   bottom: 188px;
@@ -267,12 +270,14 @@ body {
   background-size: cover;
   background-position: center;
 }
-.photo-wrap {
+
+.photo-container {
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 1;
 }
+
 .ele-wrap {
   position: absolute;
   top: 0;
@@ -281,6 +286,7 @@ body {
   height: 100%;
   z-index: 3;
 }
+
 .radius-box {
   width: 76%;
   border: 1px solid #3a3f58;
@@ -293,6 +299,7 @@ body {
   font-size: 14px;
   font-weight: 600;
 }
+
 .circle-box {
   width: 40px;
   height: 40px;
@@ -306,16 +313,19 @@ body {
   text-align: center;
   background-color: #ecf1f7;
 }
+
 .circle-box img {
   max-width: 70%;
   vertical-align: middle;
 }
+
 .page1,
 .page2,
 .page3,
 .page4 {
-  color: #333;
+  color: #2e2e2e;
 }
+
 .text-frame {
   z-index: 2;
   width: 84%;
@@ -328,10 +338,12 @@ body {
   border-radius: 12px;
   overflow: hidden;
 }
+
 .page5 .text-frame {
   background-color: inherit;
   z-index: 20;
 }
+
 .radius {
   border-radius: 8px;
   overflow: hidden;

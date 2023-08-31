@@ -5,7 +5,8 @@ var loadTimer;
 var domLists = [];
 var mapFlag = false;
 
-(function() {
+//加载百度地图
+(function () {
   window.HOST_TYPE = "2";
   window.BMap_loadScriptTime = new Date().getTime();
   document.write(
@@ -14,7 +15,7 @@ var mapFlag = false;
 })();
 
 /**
- * 图片加载完成
+ * 图片加载
  */
 function loadDone() {
   loadSum++;
@@ -38,7 +39,7 @@ function start() {
     document.getElementById("loading-mask").style.display = "none";
   }, 100);
 
-  document.getElementsByClassName("wp-inner")[0].fullpage({
+  document.getElementsByClassName("pageing-container")[0].fullpage({
     change: function (e) {
       clearTime();
       // 移除动画属性
@@ -82,6 +83,7 @@ function start() {
   });
 }
 
+//清除动画时间
 function clearTime() {
   domLists.forEach((dom, i, arr) => {
     if (dom.timer) {
@@ -176,7 +178,8 @@ window.onload = function () {
   // 滚屏动画控制
   if (isMobile !== false) {
     loadTimer = setInterval(() => {
-      if (loadSum >= 17) {
+      //图片全部加载完开始
+      if (loadSum >= 22) {
         start();
       }
     }, 300);
@@ -207,17 +210,22 @@ window.onload = function () {
     playBtn.style.animationPlayState = "paused";
   }
 
-  playBtn.addEventListener("click", function (event) {
-    if (play) {
-      this.style.animationPlayState = "paused";
-      mp3.pause();
-      play = false;
-    } else {
-      if (mp3.readyState === 4) {
-        this.style.animationPlayState = "running";
-        mp3.play();
-        play = true;
+  //播放按钮点击事件
+  playBtn.addEventListener(
+    "click",
+    function (event) {
+      if (play) {
+        event.target.style.animationPlayState = "paused";
+        mp3.pause();
+        play = false;
+      } else {
+        if (mp3.readyState === 4) {
+          event.target.style.animationPlayState = "running";
+          mp3.play();
+          play = true;
+        }
       }
-    }
-  });
+    },
+    true
+  );
 };

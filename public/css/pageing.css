@@ -1,0 +1,25 @@
+.pageing {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.pageing:after {
+  display: block;
+  content: " ";
+  height: 0;
+  clear: both;
+}
+
+.pageing.anim {
+  -webkit-transition: all 500ms ease-out 0s;
+  transition: all 500ms ease-out 0s;
+}
+
+.pageing-page {
+  display: block;
+  overflow: hidden;
+}
+
+.pageing-dir-h {
+  float: left;
+}
