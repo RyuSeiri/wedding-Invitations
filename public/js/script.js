@@ -1,6 +1,5 @@
 // 图片加载数
 var loadSum = 0;
-var isMobile = null;
 var loadTimer;
 var domLists = [];
 
@@ -19,15 +18,6 @@ var domLists = [];
 function loadDone() {
   loadSum++;
 }
-
-/**
- * 判断设备类型
- */
-function pcTip() {
-  isMobile = true;
-}
-
-var timer;
 
 /**
  * 开始函数
@@ -145,7 +135,6 @@ function initMap() {
       span.appendChild(document.createTextNode(this._text));
 
       let arrow = (this._arrow = document.createElement("div"));
-      //   arrow.style.background = "url(http://map.baidu.com/fwmap/upload/r/map/fwmap/static/house/images/label.png) no-repeat";
       arrow.style.position = "absolute";
       arrow.style.width = "0";
       arrow.style.height = "0";
@@ -188,9 +177,10 @@ function destoryMap() {
 
 //跳转到微信地图
 function dh() {
-  window.location.href = `https://www.xiyoupark.com/weixin/wxhome/Navigation?back=1&latitude=123.066801&longitude=41.793575&name=%E6%B2%88%E9%98%B3%E5%B8%82%E6%96%B0%E6%B0%91%E5%B8%82%E5%8F%91%E5%93%88%E7%89%9B%E5%BC%A0%E8%AE%B0%E9%A3%9F%E5%BA%9C%E4%BA%8C%E6%A5%BC&address=9%E6%9C%8816%E5%8F%B7%E4%B8%8D%E8%A7%81%E4%B8%8D%E6%95%A3`;
+  // window.location.href = `https://www.xiyoupark.com/weixin/wxhome/Navigation?back=1&latitude=123.066801&longitude=41.793575&name=%E6%B2%88%E9%98%B3%E5%B8%82%E6%96%B0%E6%B0%91%E5%B8%82%E5%8F%91%E5%93%88%E7%89%9B%E5%BC%A0%E8%AE%B0%E9%A3%9F%E5%BA%9C%E4%BA%8C%E6%A5%BC&address=9%E6%9C%8816%E5%8F%B7%E4%B8%8D%E8%A7%81%E4%B8%8D%E6%95%A3`;
 }
 
+var timer;
 // 倒计时函数
 function showtime() {
   let nowtime = new Date(), //获取当前时间
@@ -200,23 +190,22 @@ function showtime() {
     lefth = Math.floor((lefttime / (1000 * 60 * 60)) % 24), //计算小时数
     leftm = Math.floor((lefttime / (1000 * 60)) % 60), //计算分钟数
     lefts = Math.floor((lefttime / 1000) % 60); //计算秒数
-  document.getElementById("day").innerHTML = String(leftd).padStart('2', 0);
-  document.getElementById("hour").innerHTML = String(lefth).padStart('2', 0);
-  document.getElementById("minute").innerHTML = String(leftm).padStart('2', 0);
-  document.getElementById("second").innerHTML = String(lefts).padStart('2', 0);
+  document.getElementById("day").innerHTML = String(leftd).padStart("2", 0);
+  document.getElementById("hour").innerHTML = String(lefth).padStart("2", 0);
+  document.getElementById("minute").innerHTML = String(leftm).padStart("2", 0);
+  document.getElementById("second").innerHTML = String(lefts).padStart("2", 0);
 }
 
 // 画面加载事件
 window.onload = function () {
   // 滚屏动画控制
-  if (isMobile !== false) {
-    loadTimer = setInterval(() => {
-      //图片全部加载完开始
-      if (loadSum >= 22) {
-        start();
-      }
-    }, 300);
-  }
+  loadTimer = setInterval(() => {
+    //图片全部加载完开始
+    if (loadSum >= 22) {
+      start();
+    }
+  }, 300);
+
   let mp3 = document.querySelector("#mp3");
   let playBtn = document.querySelector("#play-btn");
   let play;
