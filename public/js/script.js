@@ -1,18 +1,3 @@
-// 图片加载数
-var loadSum = 0;
-var loadTimer;
-var domLists = [];
-
-/**
- * 图片加载
- */
-function loadDone() {
-  loadSum++;
-  if (loadSum >= 20) {
-    start();
-  }
-}
-
 //加载百度地图
 (function () {
   window.HOST_TYPE = "2";
@@ -22,17 +7,14 @@ function loadDone() {
   );
 })();
 
-/**
- * 开始函数
- */
+// 图片加载数
+var domLists = [];
+
+//開始函数
 function start() {
-  clearInterval(loadTimer);
   let forEach = [].forEach;
   // 画面加载完毕之后loading消失
-  setTimeout(() => {
-    document.getElementById("loading-mask").style.display = "none";
-  }, 100);
-
+  document.getElementById("loading-mask").style.display = "none";
   document.querySelector(".pageing-container").fullpage({
     change: function (e) {
       clearTime();
@@ -189,13 +171,14 @@ function dh() {
 var timer;
 // 倒计时函数
 function showtime() {
-  let nowtime = new Date(), //获取当前时间
-    endtime = new Date("2023/9/16 08:58"); //定义目标时间
-  let lefttime = endtime.getTime() - nowtime.getTime(), //距离结束时间的毫秒数
-    leftd = Math.floor(lefttime / (1000 * 60 * 60 * 24)), //计算天数
-    lefth = Math.floor((lefttime / (1000 * 60 * 60)) % 24), //计算小时数
-    leftm = Math.floor((lefttime / (1000 * 60)) % 60), //计算分钟数
-    lefts = Math.floor((lefttime / 1000) % 60); //计算秒数
+  let nowtime = new Date(); //获取当前时间
+  let endtime = new Date("2023/9/16 08:58"); //定义目标时间
+  let lefttime = endtime.getTime() - nowtime.getTime(); //距离结束时间的毫秒数
+  let leftd = Math.floor(lefttime / (1000 * 60 * 60 * 24)); //计算天数
+  let lefth = Math.floor((lefttime / (1000 * 60 * 60)) % 24); //计算小时数
+  let leftm = Math.floor((lefttime / (1000 * 60)) % 60); //计算分钟数
+  let lefts = Math.floor((lefttime / 1000) % 60); //计算秒数
+
   document.getElementById("day").innerHTML = String(leftd).padStart("2", 0);
   document.getElementById("hour").innerHTML = String(lefth).padStart("2", 0);
   document.getElementById("minute").innerHTML = String(leftm).padStart("2", 0);
@@ -204,6 +187,7 @@ function showtime() {
 
 // 画面加载事件
 window.onload = function () {
+  start();
   // 滚屏动画控制
   let mp3 = document.querySelector("#mp3");
   let playBtn = document.querySelector("#play-btn");
