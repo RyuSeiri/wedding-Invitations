@@ -148,7 +148,6 @@ function initMap() {
       return div;
     };
 
-    //
     ComplexCustomOverlay.prototype.draw = function () {
       let map = this._map;
       let pixel = map.pointToOverlayPixel(this._point);
@@ -201,7 +200,7 @@ window.onload = function () {
   // 滚屏动画控制
   loadTimer = setInterval(() => {
     //图片全部加载完开始
-    if (loadSum >= 22) {
+    if (loadSum >= 20) {
       start();
     }
   }, 300);

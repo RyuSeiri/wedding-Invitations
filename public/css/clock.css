@@ -83,11 +83,6 @@
   top: -100%;
 }
 
-.count-down .count-flip .c-com .flex-wrap .curr-num {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
 .c-wrap {
   width: 100%;
   height: 100%;
