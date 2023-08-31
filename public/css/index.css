@@ -2,7 +2,7 @@ html,
 body {
   width: 100%;
   overflow: hidden;
-  font-family:  "Microsoft YaHei";
+  font-family: "Microsoft YaHei";
 }
 
 .wp {
@@ -97,7 +97,6 @@ body {
     url("../font/font_934283_rjwklbuzkg.svg#iconfont") format("svg");
 }
 
-
 #play-btn {
   position: absolute;
   background-color: #ddd6d66b;
@@ -186,10 +185,9 @@ body {
 
 .radius-box {
   width: 76%;
-  border: 1px solid #fafafc;
   height: 26px;
   border-radius: 13px;
-  box-shadow: 3px #fafafc;
+  border: 3px solid #fafafc;
   left: 12%;
   line-height: 26px;
   color: #3a3f58;
@@ -204,7 +202,7 @@ body {
   top: -22px;
   float: right;
   border-radius: 50%;
-  border: 2px solid #fafafc;
+  border: 3px solid #fafafc;
   left: 50%;
   margin-left: -20px;
   line-height: 44px;
