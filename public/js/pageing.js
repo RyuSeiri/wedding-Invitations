@@ -89,7 +89,7 @@
     for (var i = 0; i < that.pageEles.length; i++) {
       var pageEle = that.pageEles[i];
       pageEle.classList.add("pageing-page");
-      pageEle.classList.add("fullPage-dir-" + o.dir);
+      pageEle.classList.add("pageing-dir-" + o.dir);
     }
 
     that.pagesLength = that.pageEles.length;
@@ -204,8 +204,6 @@
       });
     }
 
-    // 翻转屏幕提示
-    // ==============================
     window.addEventListener(
       "orientationchange",
       function () {
@@ -261,8 +259,6 @@
         next: next,
         cur: cur,
       });
-
-      // beforeChange 显示返回false 可阻止滚屏的发生
       if (flag === false) {
         return 1;
       }

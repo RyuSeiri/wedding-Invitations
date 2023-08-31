@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./public/css/pageing.css" />
     <link rel="stylesheet" href="./public/css/animate.css" />
     <link rel="stylesheet" href="./public/css/index.css" />
+    <link rel="stylesheet" href="./public/css/clock.css" />
     <script type="text/javascript" src="./public/js/pageing.js"></script>
     <script type="text/javascript" src="./public/js/script.js"></script>
   </head>
@@ -123,7 +124,7 @@
               data-animate="rotateIn"
               data-time="1200"
               data-sec="pulseing"
-              data-sectime="1200"
+              data-sectime="1000"
             ></div>
           </div>
           <div class="ele-wrap">
@@ -514,9 +515,6 @@
               "
               data-animate="myzoomIn"
             ></div>
-            <!-- <div class="full-bg js-animate animated animation-2000"
-          style="background-image: url(./public/photo/p2-2.jpg);width: 100%;height: 100%;position: absolute;top:0;left: 0;"
-          data-sec="myzoomIn" data-time="12500"> -->
           </div>
           <div class="ele-wrap">
             <div
@@ -595,11 +593,7 @@
                 class="js-animate animated animation-500"
                 data-animate="fadeInRight"
                 data-time="2500"
-                style="
-                  position: absolute;
-                  left: 8%;
-                  font-size: 16px;
-                "
+                style="position: absolute; left: 8%; font-size: 16px"
               >
                 新郎: 李世龙
               </div>
@@ -607,11 +601,7 @@
                 class="js-animate animated animation-500"
                 data-animate="fadeInLeft"
                 data-time="2500"
-                style="
-                  position: absolute;
-                  right: 7%;
-                  font-size: 16px;
-                "
+                style="position: absolute; right: 7%; font-size: 16px"
               >
                 新娘: 邵铭舸
               </div>
@@ -641,10 +631,6 @@
             >
               欢迎2023年9月16日参加我们的婚礼
             </div>
-            <!-- <div class="js-animate animated animation-2000" data-animate="zoomIn" data-time="5000"
-            style="position: absolute;top: 95%;left: 0;width: 100%;text-align: center;">
-            <img src="./public/meta/invitation.png" style="max-width: 75%;">
-          </div> -->
           </div>
         </div>
         <div class="page page3">
@@ -826,8 +812,8 @@
         <div class="page page5">
           <div class="photo-container">
             <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownLeft"
+              class="photo-box js-animate animated animation-500"
+              data-animate="fadeIn"
               data-sectime="1000"
               data-time="500"
               style="
@@ -841,8 +827,8 @@
               "
             ></div>
             <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownRight"
+              class="photo-box js-animate animated animation-500"
+              data-animate="fadeIn"
               data-sectime="1000"
               data-time="500"
               style="
@@ -856,7 +842,7 @@
               "
             ></div>
             <div
-              class="photo-box js-animate animated animation-2000"
+              class="photo-box js-animate animated animation-1000"
               data-animate="rotateInDownLeft"
               data-sectime="1000"
               data-time="3000"
@@ -871,7 +857,7 @@
               "
             ></div>
             <div
-              class="photo-box js-animate animated animation-2000"
+              class="photo-box js-animate animated animation-1000"
               data-animate="rotateInDownRight"
               data-sectime="1000"
               data-time="3000"
@@ -886,10 +872,30 @@
               "
             ></div>
             <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownLeft"
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-animate="zoomInLeft"
+              data-time="0"
+              data-sec="pulseing"
               data-sectime="1000"
-              data-time="5000"
+            ></div>
+            <div
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-animate="zoomInRight"
+              data-time="0"
+              data-sec="pulseing"
+              data-sectime="1500"
+            ></div>
+          </div>
+        </div>
+        <div class="page page6">
+          <div class="photo-container">
+            <div
+              class="photo-box js-animate animated animation-500"
+              data-animate="rotateInDownLeft"
+              data-sectime="500"
+              data-time="0"
               style="
                 position: absolute;
                 width: 100%;
@@ -901,10 +907,45 @@
               "
             ></div>
             <div
-              class="photo-box js-animate animated animation-2000"
+              class="photo-box js-animate animated animation-1000"
               data-animate="rotateInDownRight"
               data-sectime="1000"
-              data-time="8000"
+              data-time="3000"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                background-image: url(./public/photo/p5-4.jpg);
+              "
+            ></div>
+            <div
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-animate="zoomInLeft"
+              data-time="0"
+              data-sec="pulseing"
+              data-sectime="1000"
+            ></div>
+            <div
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-animate="zoomInRight"
+              data-time="0"
+              data-sec="pulseing"
+              data-sectime="1500"
+            ></div>
+          </div>
+        </div>
+        <div class="page page7">
+          <div class="photo-container">
+            <div
+              class="photo-box js-animate animated animation-500"
+              data-animate="rotateInDownLeft"
+              data-sectime="500"
+              data-time="0"
               style="
                 position: absolute;
                 width: 100%;
@@ -912,14 +953,14 @@
                 top: 0;
                 left: 0;
                 z-index: 4;
-                background-image: url(./public/photo/p5-4.jpg);
+                background-image: url(./public/photo/p5-5.jpg);
               "
             ></div>
             <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownLeft"
+              class="photo-box js-animate animated animation-1000"
+              data-animate="rotateInDownRight"
               data-sectime="1000"
-              data-time="10000"
+              data-time="3000"
               style="
                 position: absolute;
                 width: 100%;
@@ -927,14 +968,34 @@
                 top: 0;
                 left: 0;
                 z-index: 5;
-                background-image: url(./public/photo/p5-5.jpg);
+                background-image: url(./public/photo/p5-6.jpg);
               "
             ></div>
             <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownRight"
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-animate="zoomInLeft"
+              data-time="0"
+              data-sec="pulseing"
               data-sectime="1000"
-              data-time="13000"
+            ></div>
+            <div
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-animate="zoomInRight"
+              data-time="0"
+              data-sec="pulseing"
+              data-sectime="1500"
+            ></div>
+          </div>
+        </div>
+        <div class="page page8">
+          <div class="photo-container">
+            <div
+              class="photo-box js-animate animated animation-500"
+              data-animate="rotateInDownLeft"
+              data-sectime="1000"
+              data-time="0"
               style="
                 position: absolute;
                 width: 100%;
@@ -942,14 +1003,14 @@
                 top: 0;
                 left: 0;
                 z-index: 6;
-                background-image: url(./public/photo/p5-6.jpg);
+                background-image: url(./public/photo/p5-7.jpg);
               "
             ></div>
             <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownLeft"
+              class="photo-box js-animate animated animation-1000"
+              data-animate="rotateInDownRight"
               data-sectime="1000"
-              data-time="16000"
+              data-time="3000"
               style="
                 position: absolute;
                 width: 100%;
@@ -957,107 +1018,82 @@
                 top: 0;
                 left: 0;
                 z-index: 7;
-                background-image: url(./public/photo/p5-7.jpg);
-              "
-            ></div>
-            <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownRight"
-              data-sectime="1000"
-              data-time="19000"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                z-index: 8;
                 background-image: url(./public/photo/p5-8.jpg);
               "
             ></div>
             <div
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-animate="zoomInLeft"
+              data-time="0"
+              data-sec="pulseing"
+              data-sectime="1000"
+            ></div>
+            <div
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-animate="zoomInRight"
+              data-time="0"
+              data-sec="pulseing"
+              data-sectime="1500"
+            ></div>
+          </div>
+        </div>
+        <div class="page page9">
+          <div class="photo-container">
+            <div
               class="photo-box js-animate animated animation-2000"
               data-animate="rotateInDownLeft"
               data-sectime="1000"
-              data-time="22000"
+              data-time="0"
               style="
                 position: absolute;
                 width: 100%;
-                height: 100%;
-                top: 0%;
-                left: 0;
-                z-index: 9;
-                background-image: url(./public/photo/p5-9.jpg);
-              "
-            ></div>
-            <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="rotateInDownRight"
-              data-sectime="1000"
-              data-time="25000"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0%;
-                left: 0;
-                z-index: 10;
-                background-image: url(./public/photo/p5-10.jpg);
-              "
-            ></div>
-            <div
-              class="photo-box js-animate animated animation-2000"
-              data-animate="fadeIn"
-              data-sectime="1000"
-              data-time="28000"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 38%;
+                height: 36%;
                 top: 0;
                 left: 0;
-                z-index: 11;
+                z-index: 7;
                 background-image: url(./public/photo/p5-11.jpg);
               "
             ></div>
             <div
               class="photo-box js-animate animated animation-2000"
-              data-animate="fadeIn"
+              data-animate="rotateInDownRight"
               data-sectime="1000"
-              data-time="28000"
+              data-time="0"
               style="
                 position: absolute;
                 width: 100%;
-                height: 62%;
-                top: 38%;
+                height: 64%;
+                top: 36%;
                 left: 0;
-                z-index: 11;
+                z-index: 7;
                 background-image: url(./public/photo/p5-12.jpg);
               "
             ></div>
             <div
               class="photo-box js-animate animated animation-2000"
-              data-animate="fadeIn"
+              data-animate="myzoomIn"
               data-sectime="1000"
-              data-time="31000"
+              data-time="3000"
               style="
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                top: 0%;
+                top: 0;
                 left: 0;
-                z-index: 12;
+                z-index: 7;
                 background-image: url(./public/photo/p5-13.jpg);
               "
             ></div>
             <h4
               class="js-animate animated animation-2000"
-              data-animate="myzoomIn"
-              data-time="34000"
+              data-animate="fadeIn"
+              data-time="3200"
               style="
                 position: absolute;
                 width: 100%;
-                top: 5%;
+                top: 10%;
                 left: 0;
                 z-index: 13;
                 text-align: center;
@@ -1067,17 +1103,15 @@
                 color: #fff;
               "
             >
-              Some of us get dipped in flat,<br />
-              some in satin, some in gloss. <br />
-              But every once in a while you find someone who's iridescent,
-              <br />
-              and when you do,nothing will ever compare.
+              良辰已定，吉日待访<br />
+              吾有薄酒，已谢良友<br />
+              敬备喜宴，随候尊驾
             </h4>
             <div
               class="text-frame js-animate animated"
               style="height: 84%"
               data-animate="zoomInLeft"
-              data-time="1000"
+              data-time="0"
               data-sec="pulseing"
               data-sectime="1000"
             ></div>
@@ -1085,67 +1119,234 @@
               class="text-frame js-animate animated"
               style="height: 84%"
               data-animate="zoomInRight"
-              data-time="1000"
+              data-time="0"
               data-sec="pulseing"
               data-sectime="1500"
             ></div>
           </div>
-          <div class="ele-wrap"></div>
         </div>
-        <div class="page page6">
-          <div id="map"></div>
-          <div id="location-btn">
-            <i class="iconfont" style="font-size: 32px">&#xe616;</i>
-          </div>
-          <div id="map-msg">
-            <p
-              class="js-animate animated"
-              data-animate="bounceInDown"
-              data-time="0"
-            >
-              <i class="iconfont red-icon">&#xe63e;</i
-              >沈阳市新民市发哈牛张记食府二楼
-            </p>
-            <p
-              class="js-animate animated"
-              data-animate="bounceInUp"
-              data-time="1000"
-            >
-              <i class="iconfont red-icon">&#xe636;</i>有任何疑问请致电
-              新郎&新娘
-            </p>
-          </div>
-        </div>
-        <div class="page page7">
+        <div class="page page10">
           <div class="photo-container">
             <div
-              class="full-bg js-animate animated animation-4000"
+              class="photo-box js-animate animated"
+              data-time="0"
               style="
-                background-image: url(./public/photo/p1-1.jpg);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background-image: url(./public/photo/p6-1.jpg);
+              "
+            ></div>
+            <div
+              class="text-frame js-animate animated"
+              style="height: 84%"
+              data-time="0"
+            ></div>
+          </div>
+          <div class="ele-wrap">
+            <div
+              class="js-animate animated"
+              style="
+                font-size: 17px;
+                line-height: 1.5;
+                letter-spacing: 2px;
+                font-weight: bold;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                opacity: 1;
+                padding: 5px;
+                position: relative;
+                top: 18%;
+              "
+            >
+              婚/礼/倒/计/时
+            </div>
+            <div
+              class="count-down eles js-animate animated"
+              style="
+                transform: rotate(0deg);
+                width: 100%;
+                height: 85px px;
+                position: relative;
+                top: 20%;
+                box-shadow: rgb(153, 153, 153) 0px 0px 0px;
+              "
+            >
+              <div class="ani-wrap">
+                <div class="count-flip" style="transform: scale(1); opacity: 1">
+                  <div
+                    class="c-com c-day"
+                    style="
+                      border-color: rgb(153, 153, 153);
+                      border-radius: 5px;
+                      border-style: solid;
+                      border-width: 0px;
+                    "
+                  >
+                    <div class="c-wrap">
+                      <div class="c-num">
+                        <div class="flex-wrap">
+                          <div
+                            class="curr-num"
+                            style="color: rgb(255, 255, 255)"
+                            id="day"
+                          >
+                            00
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-text" style="color: rgb(255, 255, 255)">
+                        天
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="c-com c-hour"
+                    style="
+                      border-color: rgb(153, 153, 153);
+                      border-radius: 5px;
+                      border-style: solid;
+                      border-width: 0px;
+                    "
+                  >
+                    <div class="c-wrap">
+                      <div class="c-num">
+                        <div class="flex-wrap">
+                          <div
+                            class="curr-num"
+                            style="color: rgb(255, 255, 255)"
+                            id="hour"
+                          >
+                            00
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-text" style="color: rgb(255, 255, 255)">
+                        时
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      border-color: rgb(153, 153, 153);
+                      border-radius: 5px;
+                      border-style: solid;
+                      border-width: 0px;
+                    "
+                    class="c-com"
+                  >
+                    <div class="c-wrap">
+                      <div class="c-num">
+                        <div class="flex-wrap">
+                          <div
+                            class="curr-num"
+                            style="color: rgb(255, 255, 255)"
+                            id="minute"
+                          >
+                            00
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-text" style="color: rgb(255, 255, 255)">
+                        分
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="c-com c-second"
+                    style="
+                      border-color: rgb(153, 153, 153);
+                      border-radius: 5px;
+                      border-style: solid;
+                      border-width: 0px;
+                    "
+                  >
+                    <div class="c-wrap">
+                      <div class="c-num">
+                        <div class="flex-wrap">
+                          <div
+                            class="curr-num"
+                            style="color: rgb(255, 255, 255)"
+                            id="second"
+                          >
+                            00
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-text" style="color: rgb(255, 255, 255)">
+                        秒
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 50% auto 0;
+              "
+            >
+              <div class="map-wrap" style="margin-top: 20px">
+                <div id="map" style="height: 200px; width: 300px"></div>
+                <img
+                  class="dh-img js-animate animated animation-500"
+                  src="./public/meta/dh.png"
+                  onclick="dh()"
+                />
+              </div>
+            </div>
+            <div
+              class="js-animate animated"
+              data-animate="fadeIn"
+              data-time="1000"
+              style="
+                position: absolute;
+                top: 72%;
+                width: 100%;
+                font-weight: 700;
+                text-align: center;
+              "
+            >
+              地址：沈阳市新民市发哈牛张记食府二楼
+            </div>
+            <h4
+              class="js-animate animated"
+              data-animate="fadeIn"
+              data-time="1000"
+              style="
+                position: absolute;
+                top: 80%;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+              "
+            >
+              欢迎09月16日参加我们的婚礼
+            </h4>
+          </div>
+        </div>
+        <div class="page page11">
+          <div class="photo-container">
+            <div
+              class="full-bg"
+              style="
+                background-color: rgba(125, 12, 12, 1);
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
               "
-              data-sec="fadeIn"
-              data-time="0"
             ></div>
           </div>
           <div class="ele-wrap">
-            <div
-              style="
-                position: relative;
-                top: 10%;
-                text-align: center;
-                margin: auto;
-                width: 80%;
-                justify-content: center;
-                align-items: center;
-              "
-            >
-              <p class="p-text p-button">🧧 结 ❤ 婚 ❤ 红 ❤ 包 🧧</p>
-            </div>
             <div
               style="
                 position: absolute;
@@ -1154,11 +1355,72 @@
                 width: 100%;
               "
             >
-              <div class="tel-me">
-                <img class="photo-box" src="./public/photo/p7-1-1.jpg" />
-                <img class="photo-box" src="./public/photo/p7-1-2.jpg" />
-                <p class="p-text p-button">新郎</p>
-                <p class="p-text p-button">新娘</p>
+              <div
+                class="js-animate animated"
+                data-animate="fadeIn"
+                data-time="500"
+                style="
+                  font-size: 16px;
+                  line-height: 2;
+                  letter-spacing: 1px;
+                  font-weight: normal;
+                  text-align: center;
+                  writing-mode: lr-tb;
+                  color: #e3e3e3;
+                  opacity: 1;
+                  padding: 5px;
+                  text-indent: 0px;
+                "
+              >
+                <p>
+                  婚礼，是一场过渡性仪式<br />
+                  这种仪式感会因为家人<br />
+                  朋友的到场而显得珍贵<br />
+                  感谢你，不远万里，为我们祝福<br />
+                  你的祝福将伴随着我们<br />
+                  开启人生新篇章<br />
+                  愿我们继续在山川&nbsp;烟火&nbsp;黄昏<br />
+                  每一个温暖的日子相约<br />
+                </p>
+              </div>
+              <div
+                class="js-animate animated"
+                data-animate="fadeIn"
+                data-time="1500"
+                style="
+                  font-size: 18px;
+                  line-height: 2;
+                  letter-spacing: 1px;
+                  font-weight: bold;
+                  text-align: center;
+                  writing-mode: lr-tb;
+                  color: #e3e3e3;
+                  opacity: 1;
+                  padding: 5px;
+                  text-indent: 0px;
+                "
+              >
+                -THANS-<br />
+                END<br />
+              </div>
+              <div
+                class="js-animate animated"
+                data-animate="fadeIn"
+                data-time="1500"
+                style="
+                  font-size: 100px;
+                  line-height: 1;
+                  letter-spacing: 6px;
+                  font-weight: bold;
+                  text-align: center;
+                  writing-mode: lr-tb;
+                  color: rgb(164, 28, 28);
+                  opacity: 1;
+                  padding: 5px;
+                  text-indent: 0px;
+                "
+              >
+                囍
               </div>
             </div>
           </div>

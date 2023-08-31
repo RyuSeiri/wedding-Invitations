@@ -2,7 +2,9 @@ html,
 body {
   width: 100%;
   overflow: hidden;
-  font-family: "Microsoft YaHei";
+  font-family: "微软雅黑", "Microsoft YaHei";
+    writing-mode: lr-tb;
+    text-indent: 0px;
 }
 
 .wp {
@@ -17,9 +19,9 @@ body {
 .page {
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
   position: relative;
-  background-color: #e2ecf5;
+  background-color: #ffffff;
 }
 
 .img-wrap {
@@ -101,13 +103,13 @@ body {
   position: absolute;
   background-color: #ddd6d66b;
   top: 20px;
-  right: 15px;
+  right: 10px;
   z-index: 3000;
   width: 34px;
   height: 34px;
   border-radius: 50%;
   line-height: 33px;
-  border: 3px solid #f2f2f2;
+  border: 1px solid #f2f2f2;
   text-align: center;
   -webkit-transition-duration: 1s;
   -webkit-animation: rotate 3s linear infinite;
@@ -151,14 +153,6 @@ body {
   color: #e60000;
   margin-right: 5px;
   font-size: 18px;
-}
-
-#location-btn {
-  position: absolute;
-  bottom: 188px;
-  right: 4px;
-  color: #555;
-  padding: 6px;
 }
 
 .full-bg,
@@ -236,6 +230,26 @@ body {
 }
 
 .page5 .text-frame {
+  background-color: inherit;
+  z-index: 20;
+}
+
+.page6 .text-frame {
+  background-color: inherit;
+  z-index: 20;
+}
+
+.page7 .text-frame {
+  background-color: inherit;
+  z-index: 20;
+}
+
+.page8 .text-frame {
+  background-color: inherit;
+  z-index: 20;
+}
+
+.page9 .text-frame {
   background-color: inherit;
   z-index: 20;
 }
@@ -401,7 +415,6 @@ a {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  display: inline-flex;
 }
 
 .dh-img {
@@ -409,4 +422,20 @@ a {
   bottom: 0;
   right: 0;
   width: 80px;
+}
+
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+}
+@keyframes blink {
+	50% {
+		border-color: transparent;		/*点滅風に見せる*/
+	}
+}
+
+.typing-animation {
+	animation: typing 3s steps(18), blink .4s step-end infinite alternate;	/*アニメーション関連*/
 }
