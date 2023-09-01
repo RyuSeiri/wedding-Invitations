@@ -3,7 +3,7 @@
     page: ".page",
     start: 0,
     duration: 1000,
-    loop: true,
+    loop: false,
     drag: false,
     dir: "v",
     der: 0.1,
