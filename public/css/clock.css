@@ -92,12 +92,7 @@
 }
 
 .c-wrap .c-num {
-  width: auto;
-}
-
-.c-wrap .c-num {
   display: inline-block;
-  width: 50%;
   overflow: hidden;
   font-size: 20px;
   color: #999;

@@ -3,7 +3,7 @@
   window.HOST_TYPE = "2";
   window.BMap_loadScriptTime = new Date().getTime();
   document.write(
-    '<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=gGZ5PKkgs2Ul1w1npyQ4IEEf93WuzeId&services=&t=20230808153658"></script>'
+    '<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=gGZ5PKkgs2Ul1w1npyQ4IEEf93WuzeId&services=&t=20231228233855"></script>'
   );
 })();
 
@@ -174,10 +174,10 @@ function showtime() {
   let nowtime = new Date(); //获取当前时间
   let endtime = new Date("2023/9/16 08:58"); //定义目标时间
   let lefttime = endtime.getTime() - nowtime.getTime(); //距离结束时间的毫秒数
-  let leftd = Math.floor(lefttime / (1000 * 60 * 60 * 24)); //计算天数
-  let lefth = Math.floor((lefttime / (1000 * 60 * 60)) % 24); //计算小时数
-  let leftm = Math.floor((lefttime / (1000 * 60)) % 60); //计算分钟数
-  let lefts = Math.floor((lefttime / 1000) % 60); //计算秒数
+  let leftd = Math.abs(Math.floor(lefttime / (1000 * 60 * 60 * 24))); //计算天数
+  let lefth = Math.abs(Math.floor((lefttime / (1000 * 60 * 60)) % 24)); //计算小时数
+  let leftm = Math.abs(Math.floor((lefttime / (1000 * 60)) % 60)); //计算分钟数
+  let lefts = Math.abs(Math.floor((lefttime / 1000) % 60)); //计算秒数
 
   document.getElementById("day").innerHTML = String(leftd).padStart("2", 0);
   document.getElementById("hour").innerHTML = String(lefth).padStart("2", 0);
