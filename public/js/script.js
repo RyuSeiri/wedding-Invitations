@@ -3,7 +3,7 @@
   window.HOST_TYPE = "2";
   window.BMap_loadScriptTime = new Date().getTime();
   document.write(
-    '<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=S6EO9oPso0n8aTMvfH1g0aLUX6vGZx1l&services=&t=20230808153658"></script>'
+    '<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=gGZ5PKkgs2Ul1w1npyQ4IEEf93WuzeId&services=&t=20230808153658"></script>'
   );
 })();
 
